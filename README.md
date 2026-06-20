@@ -28,19 +28,19 @@ This narrowed the capture down to Packet 3440, revealing a specific GET request 
 ### Step 3: Deep Packet Inspection (DPI)
 Analyzing the packet details of Frame 3440, I drilled down into the Layer 7 Application data:
 
-Request URI: http://acroipm2.adobe.com/assets/Owner/arm/ProcessMAU.txt
+* Request URI: http://acroipm2.adobe.com/assets/Owner/arm/ProcessMAU.txt
 
-User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.2; WOW64; Trident/7.0; ...)
+* User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.2; WOW64; Trident/7.0; ...)
 
-Connection Type: Keep-Alive
+* Connection Type: Keep-Alive
 
 By examining the Hypertext Transfer Protocol metadata, I verified that this request expected a response in Frame 3442, which contained the payload data from the host.
 
 ### Step 4: Forensic Export & Evidence Preservation
 To ensure the threat intelligence and incident response teams could perform deep behavioral analysis on just this suspicious session without parsing gigabytes of noise, I carved out the evidence:
 
-Selected the filtered traffic.
+* Selected the filtered traffic.
 
-Navigated to File -> Export Specified Packets.
+* Navigated to File -> Export Specified Packets.
 
-Saved the isolated stream cleanly as result.pcap.
+* Saved the isolated stream cleanly as result.pcap.
